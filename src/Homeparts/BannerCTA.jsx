@@ -3,13 +3,14 @@ import React from "react";
 import Mysvg from "../assets/banner.svg";
 import Button from "../utils/Button";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import ButtonWithIcon from "../utils/Button";
 
 const BannerCTA = () => {
     
   return (
     <Stack position={"relative"}>
       <img src={Mysvg} alt="" style={{ maxWidth: "100%" }} />
-      
+
       <Typography
         position={"absolute"}
         color={"white"}
@@ -51,27 +52,40 @@ const BannerCTA = () => {
       >
         Locate Your Nearest <br></br> Pod Today!
       </Typography>
-       <Button
+      {/* <ButtonWithIcon
         sx={{
           position: "absolute",
           left: { xs: 20, sm: 30, md: 60, lg: 90 },
-          bottom: { xs: 2, sm: 65, md: 60, lg: 90,xl:20 },
+          bottom: { xs: 2, sm: 65, md: 60, lg: 90, xl: 20 },
           fontSize: { xs: "10px", sm: "14px", md: "17px", lg: "24px" },
-          width:{sm:"125px",md:"170px", lg:"200px"},
-          height:{sm:"35px",md:"50px", lg:"60px"}
+          width: { sm: "125px", md: "170px", lg: "200px" },
+          height: { sm: "35px", md: "50px", lg: "60px" },
+        }}
+      >
+        Book now
+      </ButtonWithIcon> */}
+      <Button
+        endIcon={<ArrowForwardIosRoundedIcon />}
+        sx={{
+          position: "absolute",
+          left: { xs: 20, sm: 30, md: 60, lg: 90 },
+          bottom: { xs: 2, sm: 65, md: 60, lg: 90, xl: 20 },
+          fontSize: { xs: "10px", sm: "14px", md: "17px", lg: "24px" },
+          width: { sm: "125px", md: "170px", lg: "200px" },
+          height: { sm: "35px", md: "50px", lg: "60px" },
         }}
       >
         Book now
       </Button>
-      
-      <ArrowForwardIosRoundedIcon
+
+      {/* <ArrowForwardIosRoundedIcon
         sx={{
           position: "absolute",
           left: { xs: 150, sm: 125, md: 205, lg: 250 },
           bottom: { xs: 20, sm: 69, md: 72, lg: 106, xl:53 },
 
         }}
-      /> 
+      />  */}
     </Stack>
   );
 };

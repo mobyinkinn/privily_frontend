@@ -20,7 +20,7 @@ const PodsToexplore = () => {
       >
         Pods to Explore
       </Typography>
-      <Button sx={{ bgcolor: "transparent", fontSize:{sm:"15px",md:"20px",lg:"30px"}}}>View All</Button>
+      <Button sx={{ bgcolor: "transparent", fontSize:{sm:"15px",md:"20px",lg:"25px"}}}>View All</Button>
     </Stack>
     </>
   );

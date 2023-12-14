@@ -11,7 +11,6 @@ const CONTAINER_STYLE = {
   flex: 1,
   justifyContent: "center",
   alignItems: "center",
-  paddingTop: { md: "500px" },
 };
 
 const CARD_STYLE = {

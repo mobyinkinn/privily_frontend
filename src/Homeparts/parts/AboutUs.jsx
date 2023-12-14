@@ -4,7 +4,7 @@ import MyCarousel from './MyCarousel';
 
 const AboutUs = () => {
   return (
-    <Stack bgcolor={"#FFF5F4"} height={"500px"} sx={{flexDirection:{lg:"row",md:"column"}}}>
+    <Stack mt={5} bgcolor={"#FFF5F4"} height={"500px"} sx={{flexDirection:{lg:"row",md:"column"}}}>
       <Stack p={5} sx={{width:{lg:"50%",}}} gap={1}>
         <Stack direction={"row"} gap={1}>
           <Typography fontWeight={"bold"} color={"black"} fontSize={"50px"}>
