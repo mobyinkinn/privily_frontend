@@ -9,10 +9,9 @@ const SearchField = () => {
         src={SearchIcon}
         alt=""
         style={{
-          position: "absolute",
-          left: "30px",
-          top: "4.1%",
-          transform: "translateY(-50%)",
+          position: "fixed",
+          
+          
         }}
       />
     </Stack>

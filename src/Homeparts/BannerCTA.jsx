@@ -173,7 +173,7 @@ const BannerCTA = () => {
       <Button
         endIcon={
           <ArrowForwardIosRoundedIcon
-            sx={{ fontSize: { xs: "13px", sm: 30, md: 40, lg: 50 } }}
+            sx={{ fontSize: { xs: "30px", sm: 30, md: 40, lg: 50 } }}
           />
         }
         sx={{

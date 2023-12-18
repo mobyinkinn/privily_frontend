@@ -22,12 +22,12 @@ const Corporate = () => {
             width: "fit-content",
             p: 2,
             left: "50%",
-            top: "50%",
+            top: "55%",
             transform: "translateX(-50%)",
             // right: { xs: 20, sm: 30, md: 400, lg: 600 },
             // bottom: { xs: 2, sm: 65, md: 250, lg: 350, xl: 20 },
             fontSize: { xs: "10px", sm: "14px", md: "17px", lg: "23px" },
-            height: { sm: "35px", md: "50px", lg: "55px" },
+            height: { xs:"20px",sm: "35px", md: "50px", lg: "55px" },
             fontWeight: "bold",
           }}
         >
