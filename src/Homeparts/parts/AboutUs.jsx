@@ -4,21 +4,29 @@ import MyCarousel from './MyCarousel';
 
 const AboutUs = () => {
   return (
-    <Stack mt={5} bgcolor={"#FFF5F4"} height={"500px"} sx={{flexDirection:{lg:"row",md:"column"}}}>
-      <Stack p={5} sx={{width:{lg:"50%",}}} gap={1}>
-        <Stack direction={"row"} gap={1}>
-          <Typography fontWeight={"bold"} color={"black"} fontSize={"50px"}>
-            About{" "}
-          </Typography>
-          <Typography
-            fontWeight={"bold"}
-            color={"#ED3327"}
-            fontSize={"50px"}
-            textTransform={"uppercase"}
+    <Stack
+      mt={5}
+      bgcolor={"#FFF5F4"}
+      sx={{
+        flexDirection: { lg: "row", md: "column" },
+        height: { lg: "500px", md: "800px", sm: "850px" },
+      }}
+      display={{ xs: "none", sm: "flex", md: "flex", lg: "flex", xl: "flex" }}
+    >
+      <Stack p={5} sx={{ width: { lg: "50%" } }} gap={1}>
+        <Typography fontWeight={"bold"} color={"black"} fontSize={"30px"}>
+          About
+          <span
+            style={{
+              fontWeight: "bold",
+              color: "#ED3327",
+              fontSize: "30px",
+              textTransform: "uppercase",
+            }}
           >
             Privily
-          </Typography>
-        </Stack>
+          </span>
+        </Typography>
         <Typography letterSpacing={1} fontSize={"20px"}>
           Welcome to Privily, where solitude meets innovation. In a world where
           open office spaces dominate, we understand the need for personal space

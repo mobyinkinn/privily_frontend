@@ -38,3 +38,84 @@ code {
 .nav-links:hover{
   color: #ED3327;
 }
+.custom-tooltip {
+  background-color: white !important; /* Adjust the background color */
+  color: black !important; /* Adjust the text color */
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  
+}
+/* For small screens (sm) */
+@media only screen and (max-width: 600px) {
+  .carousel-item {
+    top: 200px;
+  }
+}
+
+/* For medium screens (md) */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  .carousel-item {
+    top: 140px;
+  }
+}
+
+/* For large screens (lg) */
+@media only screen and (min-width: 1200px) {
+  .carousel-item {
+    top: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .right-images{
+  width: 70px;
+    height: 70px;
+  }
+
+}
+
+/* For medium screens (md) */
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .right-images{
+     width: 100px;
+    height: 100px;
+  }
+}
+
+/* For large screens (lg) */
+@media only screen and (min-width: 1200px) {
+  .right-images {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+
+.Pods {
+  position: relative;
+  padding: 10px 0 10px 30px;
+  border: 1px solid lightgrey;
+  border-radius: 80px;
+}
+
+@media (min-width: 300px) {
+  .Pods {
+    width: 250px; /* Adjust the width for 300px and beyond */
+  }
+}
+
+@media (min-width: 375px) {
+  .Pods {
+    width: 305px; /* Adjust the width for 375px and beyond */
+  }
+}
+
+@media (min-width: 425px) {
+  .Pods {
+    width: 355px; /* Adjust the width for 425px and beyond */
+  }
+}
