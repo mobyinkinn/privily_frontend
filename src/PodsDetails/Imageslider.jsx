@@ -1,40 +1,40 @@
-
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Card, CardContent, Typography, Button, Stack, Box } from "@mui/material";
-import podsImg from "../../assets/podsImage.png";
+import { Card, Stack, Box } from "@mui/material";
+import KeyboardBackspaceRoundedIcon from "@mui/icons-material/KeyboardBackspaceRounded";
+import podsImg from "../assets/Reasons.png";
 
-const Sliderr = () => {
+const Imageslider = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    
+    autoplay: true,
     prevArrow: null,
     nextArrow: null,
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2, // Change this to 3 for 3 cards in a row on mobile
+          slidesToShow: 1, // Change this to 3 for 3 cards in a row on mobile
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -42,14 +42,28 @@ const Sliderr = () => {
   };
 
   return (
-    <Stack sx={{ width: {lg:"90%", xs:"93%", }, margin: "auto" }}>
+    <Stack
+      sx={{
+        width: { lg: "90%", xs: "93%" },
+        margin: "auto",
+        height: "60vh",
+        justifyContent: "center",
+      }}
+    >
+      <KeyboardBackspaceRoundedIcon sx={{pt:"40px"}} />
       <Slider {...settings}>
         {data.map((d) => (
           <Card
-            sx={{ maxWidth: "380px", borderRadius: "25px", backgroundColor:"white" }}
+            sx={{
+              maxWidth: "300px",
+              borderRadius: "25px",
+              backgroundColor: "transparent",
+              boxShadow: "none",
+              pb: 5,
+            }}
             key={d.name}
           >
-            <Stack alignItems="center" spacing={2} p={{lg:2, md:2, sm:2, xs:1.2}}>
+            <Stack alignItems="center" spacing={2}>
               <Box
                 sx={{
                   height: "auto",
@@ -68,13 +82,6 @@ const Sliderr = () => {
                   }}
                 />
               </Box>
-              <CardContent sx={{p:{xs:"0"}, pb:{xs:"0"}}}>
-                <Typography fontSize={{xs:"15px"}}gutterBottom >
-                  {d.name}
-                </Typography>
-                
-               
-              </CardContent>
             </Stack>
           </Card>
         ))}
@@ -110,4 +117,4 @@ const data = [
   },
 ];
 
-export default Sliderr;
+export default Imageslider;

@@ -94,7 +94,7 @@
 
 import { Stack, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import banner from "../assets/Slider.png";
+import banner from "../assets/Slider.webp";
 import bannerResponsive from "../assets/BannerCTAA.png";
 import Button from "../utils/Button";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";

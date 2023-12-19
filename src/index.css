@@ -10,6 +10,9 @@
 
 .slick-slide > div {
   margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slick-dots li.slick-active button:before {
@@ -95,27 +98,49 @@ code {
 }
 
 
+
 .Pods {
-  position: relative;
-  padding: 10px 0 10px 30px;
+  padding-left: 30px; /* Adjust the padding value to give space for the icon */
+  width: 240px;
   border: 1px solid lightgrey;
   border-radius: 80px;
+  position: relative;
+  padding: 10px 0px 10px 30px;
+  background-image: url('assets/Search.svg'); /* Replace with the correct path */
+  background-size: 20px; /* Adjust the size of the icon */
+  background-repeat: no-repeat;
+  background-position: 5px center; /* Adjust the position of the icon */
 }
 
-@media (min-width: 300px) {
+@media (min-width: 350px) {
   .Pods {
-    width: 250px; /* Adjust the width for 300px and beyond */
+    width: 280px; 
   }
 }
 
 @media (min-width: 375px) {
   .Pods {
-    width: 305px; /* Adjust the width for 375px and beyond */
-  }
+    width: 305px; 
+}
 }
 
 @media (min-width: 425px) {
   .Pods {
-    width: 355px; /* Adjust the width for 425px and beyond */
+    width: 355px;
   }
+}
+
+/* SearchField.css */
+.podss {
+  position: absolute;
+  text-align: start;
+  left: 10px; /* Adjust the left value as needed */
+  top: 50%; /* Adjust the top value as needed */
+  transform: translateY(-50%);
+}
+
+
+.Faq-class{
+  font-size: 20px;
+  font-weight: bold;
 }

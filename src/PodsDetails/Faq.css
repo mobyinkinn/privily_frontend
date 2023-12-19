@@ -1,0 +1,7 @@
+/* faqs.css */
+
+/* Adjust the font-weight and other styles as needed */
+.react-faq-component .react-faq-row .react-faq-title {
+  font-weight: bold;
+  font-size: 38px; /* Add font size if needed */
+}

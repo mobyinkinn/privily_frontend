@@ -1,13 +1,9 @@
 import React from 'react'
-import Navbar from './utils/Navbar'
-import Home from './Home'
+import Layouts from './Layouts'
 
 const App = () => {
   return (
-    <>
-      <Navbar/>
-      <Home/>
-    </>
+   <Layouts/>
   )
 }
 

@@ -96,7 +96,7 @@ const Reasons = () => {
           arrow
           classes={{ tooltip: "custom-tooltip" }}
         >
-          <IconButton sx={{ position: "absolute", left: 510, top: 50 }}>
+          <IconButton sx={{ position: "absolute", left: {xl:560 ,lg:510}, top: 50 }}>
             <CircleIcon
               sx={{
                 fontSize: "35px",

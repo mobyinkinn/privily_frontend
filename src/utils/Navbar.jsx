@@ -25,9 +25,17 @@ const Navbar = () => {
   };
 
   return (
-    <Stack justifyContent={"center"} p={{xs:"none", sm:3, md:3, lg:3}}>
-      <Stack direction={"row"} justifyContent={{sm:"space-between",md:"space-around"}} display={{xs:"none", sm:"flex", md:"flex", lg:"flex"}}>
-        <Link to={"/"} >
+    <Stack
+      justifyContent={"center"}
+      p={{ xs: "none", sm: 3, md: 3, lg: 3 }}
+      bgcolor={"white"}
+    >
+      <Stack
+        direction={"row"}
+        justifyContent={{ sm: "space-between", md: "space-around" }}
+        display={{ xs: "none", sm: "flex", md: "flex", lg: "flex" }}
+      >
+        <Link to={"/"}>
           <img src={logo} alt="" style={{ width: "173px", height: "50px" }} />
         </Link>
         {/* Mobile Drawer Icon */}
@@ -35,7 +43,7 @@ const Navbar = () => {
           edge="end"
           color="inherit"
           onClick={handleDrawerOpen}
-          sx={{ display: { xs: "none", sm:"block", md:"none", lg:"none" } }}
+          sx={{ display: { xs: "none", sm: "block", md: "none", lg: "none" } }}
         >
           <MenuIcon />
         </IconButton>
@@ -44,25 +52,25 @@ const Navbar = () => {
           direction={"row"}
           gap={9}
           alignItems={"center"}
-          sx={{ display: { xs: "none", sm:"none", lg:"flex", md: "flex" } }}
+          sx={{ display: { xs: "none", sm: "none", lg: "flex", md: "flex" } }}
         >
           <Link to={"#"} className="nav-links">
-            <Typography color={"black"} className="nav-links" variant="h6">
+            <Typography color={"black"} className="nav-links" fontSize={"18px"}>
               About us
             </Typography>
           </Link>
           <Link to={"#"} className="nav-links">
-            <Typography color={"black"} className="nav-links" variant="h6">
+            <Typography color={"black"} className="nav-links" fontSize={"18px"}>
               Pods Discovery
             </Typography>
           </Link>
           <Link to={"#"} className="nav-links">
-            <Typography color={"black"} className="nav-links" variant="h6">
+            <Typography color={"black"} className="nav-links" fontSize={"18px"}>
               Booking
             </Typography>
           </Link>
           <Link to={"#"} className="nav-links">
-            <Typography color={"black"} className="nav-links" variant="h6">
+            <Typography color={"black"} className="nav-links" fontSize={"18px"}>
               For Corporate
             </Typography>
           </Link>
@@ -74,7 +82,7 @@ const Navbar = () => {
         open={isDrawerOpen}
         onClose={handleDrawerClose}
         sx={{
-          display: { xs: "none", sm:"block", md: "none" },
+          display: { xs: "none", sm: "block", md: "none" },
           "& .MuiDrawer-paper": {
             width: "40%", // Adjust the width as needed
           },

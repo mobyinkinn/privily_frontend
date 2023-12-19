@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import App from './App';
-import { BrowserRouter as Router } from "react-router-dom";
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 768,
+      md: 1024,
+      lg: 1200,
+      xl: 1600, // Customize this value according to your needs
+    },
+  },
+});
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+   
   </React.StrictMode>
 );
 
