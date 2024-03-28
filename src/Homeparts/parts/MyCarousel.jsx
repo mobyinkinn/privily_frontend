@@ -1,14 +1,14 @@
 import React from "react";
 import ReactCardCarousel from "react-card-carousel";
 import Pod1 from "../../assets/Pod1.png";
-import Pod2 from "../../assets/Pod2.png";
+import Pod2 from "../../assets/Pod2png.png";
 import Pod3 from "../../assets/Pod3.png";
 
 const CONTAINER_STYLE = {
   position: "relative",
   width: "100%",
   display: "flex",
-  flex: 1,
+  flex: 0.9,
   justifyContent: "center",
   alignItems: "center",
 };

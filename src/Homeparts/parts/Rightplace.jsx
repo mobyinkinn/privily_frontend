@@ -113,7 +113,7 @@ const Rightplace = () => {
   return (
     <Stack
       bgcolor={"#FFF5F4"}
-      p={"30px 88px 30px 88px"}
+      p={{ lg: "30px 88px 30px 88px", sm: "30px 65px 30px 59px" }}
       gap={3}
       display={{ xs: "none", sm: "flex", md: "flex", lg: "flex", xl: "flex" }}
     >
@@ -136,7 +136,7 @@ const Rightplace = () => {
         coworking locations, serviced offices, office buildings, shopping malls,
         hotels, and even coliving spaces.
       </Typography>
-      <Stack direction={{ xs: "column", sm: "row" }}gap={1}>
+      <Stack direction={{ xs: "column", sm: "row" }} gap={1}>
         {workspaceData.map((workspace, index) => (
           <Stack
             key={index}
@@ -144,7 +144,6 @@ const Rightplace = () => {
             p={3}
             border={"1px solid lightgrey"}
             borderRadius={10}
-            
           >
             <Stack>
               <Typography

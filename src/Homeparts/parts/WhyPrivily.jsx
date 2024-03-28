@@ -134,7 +134,7 @@ const cardsData = [
 const WhyPrivily = () => {
   return (
     <Stack
-      p={{ xs: "10px", md: "40px 98px", lg: "40px 98px" }}
+      p={{ xs: "60px", md: "40px 60px", lg: "40px 49px" }}
       bgcolor={"#FFFCF9"}
       gap={5}
       display={{ xs: "none", sm: "flex", md: "flex", lg: "flex", xl: "flex" }}
@@ -154,6 +154,7 @@ const WhyPrivily = () => {
         direction={{ xs: "column", md: "row", lg: "row" }}
         gap={5}
         justifyContent={"center"}
+        padding={"12px 16px 12px 16px"}
       >
         {cardsData.map((card, index) => (
           <Stack

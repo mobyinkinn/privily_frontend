@@ -8,13 +8,15 @@ import Corporate from "./Homeparts/parts/Corporate";
 import Rightplace from "./Homeparts/parts/Rightplace";
 import Reasons from "./Homeparts/parts/Reasons";
 import SearchField from "./Homeparts/parts/SearchField";
+import ProductSlider from "./Homeparts/parts/ProductSlider";
 const Home = () => {
   return (
     <>
     <SearchField/>
       <BannerCTA />
       <PodsToexplore />
-      <Sliderr />
+      <ProductSlider/>
+      {/* <Sliderr /> */}
       <AboutUs />
       <WhyPrivily />
       <Corporate />

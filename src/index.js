@@ -6,11 +6,12 @@ import App from './App';
 const theme = createTheme({
   breakpoints: {
     values: {
-      xs: 0,
+      xs: 320,
+      xss:420,
       sm: 768,
       md: 1024,
       lg: 1200,
-      xl: 1600, // Customize this value according to your needs
+      xl: 1800, // Customize this value according to your needs
     },
   },
 });

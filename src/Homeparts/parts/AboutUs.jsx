@@ -13,7 +13,11 @@ const AboutUs = () => {
       }}
       display={{ xs: "none", sm: "flex", md: "flex", lg: "flex", xl: "flex" }}
     >
-      <Stack p={5} sx={{ width: { lg: "50%" } }} gap={1}>
+      <Stack
+        p={{ lg: 10, sm: "51px 56px 34px 77px" }}
+        sx={{ width: { lg: "50%" } }}
+        gap={1}
+      >
         <Typography fontWeight={"bold"} color={"black"} fontSize={"30px"}>
           About
           <span
@@ -22,6 +26,7 @@ const AboutUs = () => {
               color: "#ED3327",
               fontSize: "30px",
               textTransform: "uppercase",
+              paddingLeft: "10px",
             }}
           >
             Privily

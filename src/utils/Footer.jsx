@@ -1,86 +1,3 @@
-// import { Box, Stack, Typography } from "@mui/material";
-// import React from "react";
-// import logo from "../assets/Logo.png";
-// import SendRoundedIcon from "@mui/icons-material/SendRounded";
-// import { Link } from "react-router-dom";
-// const Footer = () => {
-//   return (
-//     <Stack maxWidth={"1920px"} direction={"row"}>
-//       <Stack width={"50%"} padding={"80px 80px 80px 125px"}>
-//         <Stack gap={2} position={"relative"}>
-//           <img src={logo} alt="" style={{ width: "286px", height: "90px" }} />
-//           <Typography pl={3} fontSize={"20px"}>
-//             Get Started Now Try Our Products
-//           </Typography>
-//           <input
-//             type="text"
-//             placeholder="Enter Your Email"
-//             style={{
-//               width: "460px",
-//               height: "50px",
-//               fontSize: "20px",
-//               paddingLeft: "25px",
-//               borderRadius: "39px",
-//               border: "1px solid black",
-//             }}
-//           />
-//           <SendRoundedIcon
-//             sx={{ position: "absolute" }}
-//             style={{
-//               left: "430px",
-//               top: "159px",
-//               fontSize: "40px",
-//               color: "#ED3327",
-//             }}
-//           />
-//         </Stack>
-//       </Stack>
-//       <Stack width={"50%"} direction={"row"} alignItems={"center"} gap={5}>
-//         <Stack gap={2} alignItems={"left"} p={2}>
-//           <Link to={"#"} className="nav-links">
-//             <Typography color={"black"} className="nav-links" variant="h6">
-//               Home
-//             </Typography>
-//           </Link>
-//           <Link to={"#"} className="nav-links">
-//             <Typography color={"black"} className="nav-links" variant="h6">
-//               About us
-//             </Typography>
-//           </Link>
-//           <Link to={"#"} className="nav-links">
-//             <Typography color={"black"} className="nav-links" variant="h6">
-//               Pods Discovery
-//             </Typography>
-//           </Link>
-//           <Link to={"#"} className="nav-links">
-//             <Typography color={"black"} className="nav-links" variant="h6">
-//               Booking
-//             </Typography>
-//           </Link>
-//         </Stack>
-//         <Stack gap={9}>
-//           <Stack gap={2}>
-//             <Link to={"#"} className="nav-links">
-//               <Typography color={"black"} className="nav-links" variant="h6">
-//                 Terms and Conditions
-//               </Typography>
-//             </Link>
-//             <Link to={"#"} className="nav-links">
-//               <Typography color={"black"} className="nav-links" variant="h6">
-//                 Privacy Policy
-//               </Typography>
-//             </Link>
-//           </Stack>
-//           <Typography >
-//             Copyright © 2023 Privily. All Rights Reserved.
-//           </Typography>
-//         </Stack>
-//       </Stack>
-//     </Stack>
-//   );
-// };
-
-// export default Footer;
 
 import { Stack, Typography } from "@mui/material";
 import React from "react";
@@ -89,6 +6,9 @@ import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const handleLinkClick = (path) => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
   return (
     <Stack
       direction={{ xs: "column", md: "row" }}
@@ -99,7 +19,7 @@ const Footer = () => {
         width={{ xs: "100%", md: "50%" }}
         p={{
           lg: "80px 80px 80px 125px",
-          md: "80px 80px 80px 125px",
+          md: "80px 80px 80px 97px",
           sm: "none",
           xs: "none",
         }}
@@ -110,16 +30,18 @@ const Footer = () => {
           position={"relative"}
           textAlign={{ xs: "center", md: "left" }}
         >
-          <img
-            src={logo}
-            alt=""
-            style={{
-              width: "286px",
-              height: "90px",
-              margin: "auto",
-              display: { xs: "block", md: "inline-block" },
-            }}
-          />
+          <Link to={"/"} onClick={handleLinkClick} style={{textAlign:"center"}}>
+            <img
+              src={logo}
+              alt=""
+              style={{
+                width: "286px",
+                height: "90px",
+                margin: "auto",
+                display: { xs: "block", md: "inline-block" },
+              }}
+            />
+          </Link>
           {/* <img src={logo} alt="" style={{ width: "286px", height: "90px" }} /> */}
           <Typography
             textAlign={"center"}
@@ -169,17 +91,21 @@ const Footer = () => {
           alignItems={{ xs: "center", md: "flex-start" }}
           p={{ xs: 2, md: 0 }}
         >
-          <Link to={"#"} className="nav-links">
+          <Link to={"/"} className="nav-links" onClick={handleLinkClick}>
             <Typography color={"black"} className="nav-links" variant="h6">
               Home
             </Typography>
           </Link>
-          <Link to={"#"} className="nav-links">
+          <Link to={"/Aboutus"} className="nav-links" onClick={handleLinkClick}>
             <Typography color={"black"} className="nav-links" variant="h6">
               About us
             </Typography>
           </Link>
-          <Link to={"#"} className="nav-links">
+          <Link
+            to={"/Podsdiscovery"}
+            className="nav-links"
+            onClick={handleLinkClick}
+          >
             <Typography color={"black"} className="nav-links" variant="h6">
               Pods Discovery
             </Typography>
@@ -200,6 +126,15 @@ const Footer = () => {
             <Link to={"#"} className="nav-links">
               <Typography color={"black"} className="nav-links" variant="h6">
                 Privacy Policy
+              </Typography>
+            </Link>
+            <Link
+              to={"/ContactUs"}
+              className="nav-links"
+              onClick={handleLinkClick}
+            >
+              <Typography color={"black"} className="nav-links" variant="h6">
+                Contact Us
               </Typography>
             </Link>
           </Stack>

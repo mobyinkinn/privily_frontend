@@ -59,7 +59,7 @@ const Reasons = () => {
         fontWeight={"bold"}
         color={"black"}
         fontSize={"30px"}
-        p={"30px 30px 30px 88px"}
+        p={{ lg: "30px 30px 30px 88px", sm: "30px 30px 30px 66px" }}
       >
         5 Reasons Why to Use &nbsp;
         <span
@@ -96,7 +96,9 @@ const Reasons = () => {
           arrow
           classes={{ tooltip: "custom-tooltip" }}
         >
-          <IconButton sx={{ position: "absolute", left: {xl:560 ,lg:510}, top: 50 }}>
+          <IconButton
+            sx={{ position: "absolute", left: { xl: 560, lg: 510 }, top: 50 }}
+          >
             <CircleIcon
               sx={{
                 fontSize: "35px",
