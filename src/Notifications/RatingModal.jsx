@@ -31,7 +31,6 @@ const RatingModal = ({ id, onClose }) => {
         }
       );
 
-      console.log("Feedback sent successfully:", response.data);
 
       // Show ThanksCom modal if the status is success
       if (response.data.status === "Success") {

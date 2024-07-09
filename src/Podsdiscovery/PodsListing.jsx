@@ -1,13 +1,13 @@
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate,useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import WifiRoundedIcon from "@mui/icons-material/WifiRounded";
 import ChairRoundedIcon from "@mui/icons-material/ChairRounded";
 import NotificationsOffRoundedIcon from "@mui/icons-material/NotificationsOffRounded";
 import StarIcon from "@mui/icons-material/Star";
 import ChargingStationRoundedIcon from "@mui/icons-material/ChargingStationRounded";
-import GridViewIcon from '@mui/icons-material/GridView';
+import GridViewIcon from "@mui/icons-material/GridView";
 import Button from "../utils/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -58,9 +58,9 @@ const PodsListing = () => {
       text: " Ventilated",
     },
   ];
-   const location = useLocation();
-   const queryParams = new URLSearchParams(location.search);
-   const selectedLocation = queryParams.get("location");
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const selectedLocation = queryParams.get("location");
   const [Cards, setCards] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -102,32 +102,32 @@ const PodsListing = () => {
       });
     }
   };
- useEffect(() => {
-   const getCastingCallsdetails = async () => {
-     try {
-       const response = await axios.post(
-         "https://privily.co/api/livesearch",
-         {
-           location: selectedLocation,
-         },
-         {
-           headers: {
-             "Content-Type": "application/x-www-form-urlencoded",
-           },
-         }
-       );
- const sortedCards = response.data.data.sort((a, b) => {
-   // You can adjust the sorting logic based on your specific requirements
-   return a.id - b.id;
- });
-       setCards(sortedCards);
-     } catch (error) {
-       console.error("Error fetching data:", error);
-     }
-   };
+  useEffect(() => {
+    const getCastingCallsdetails = async () => {
+      try {
+        const response = await axios.post(
+          "https://privily.co/api/livesearch",
+          {
+            location: selectedLocation,
+          },
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          }
+        );
+        const sortedCards = response.data.data.sort((a, b) => {
+          // You can adjust the sorting logic based on your specific requirements
+          return a.id - b.id;
+        });
+        setCards(sortedCards);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-   getCastingCallsdetails();
- }, [selectedLocation]);
+    getCastingCallsdetails();
+  }, [selectedLocation]);
   return (
     <>
       <Stack
@@ -206,14 +206,19 @@ const PodsListing = () => {
               >
                 <Stack gap={"10px"}>
                   <Typography
-                    fontSize={{ lg: "25px", md: "20px",xss:"23px", xs: "21px" }}
+                    fontSize={{
+                      lg: "25px",
+                      md: "20px",
+                      xss: "23px",
+                      xs: "21px",
+                    }}
                     fontWeight={"bold"}
                     textAlign={"left"}
                   >
                     {d.title}
                   </Typography>
                   <Typography
-                    fontSize={{ lg: "20px",xss:"14px", xs: "13px" }}
+                    fontSize={{ lg: "20px", xss: "14px", xs: "13px" }}
                     textAlign={"left"}
                   >
                     {d.address}

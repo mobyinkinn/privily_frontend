@@ -62,10 +62,10 @@ function BannerModal({ setOpenModal }) {
 
           <Stack p={{ lg: "20px 40px 40px 40px", xs: "20px 20px" }} gap={1}>
             <Button
-              onClick={() => handleLocationClick("Sandton")}
+              onClick={() => handleLocationClick("Durban")}
               sx={{ border: "1px solid lightgrey" }}
             >
-              Sandton
+              Durban
             </Button>
             <Button
               onClick={() => handleLocationClick("Midrand")}
