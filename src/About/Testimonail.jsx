@@ -6,7 +6,7 @@ import data from "./data";
 import PreviousBtn from "./PreviousBtn";
 import NextBtn from "./NextBtn";
 import Card from "./Card";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import "./Testimonial.css"
 
 function cards(data) {
